@@ -1,4 +1,7 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
+import 'package:kiosk_mode/kiosk_mode.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,6 +41,12 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   @override
+  void initState() {
+    super.initState();
+    watchKioskMode().listen((mode) => log(mode.toString()));
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -53,6 +62,19 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            ElevatedButton(
+              onPressed: () async {
+                final isKioskMode = await getKioskMode();
+                if (isKioskMode == KioskMode.enabled) {
+                  await stopKioskMode();
+                  log("stopKioskMode");
+                } else {
+                  await startKioskMode();
+                  log("startKioskMode");
+                }
+              },
+              child: Text("Kiosk Mode"),
             ),
           ],
         ),

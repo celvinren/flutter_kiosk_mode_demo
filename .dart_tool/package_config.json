@@ -62,6 +62,12 @@
       "languageVersion": "3.7"
     },
     {
+      "name": "kiosk_mode",
+      "rootUri": "file:///Users/calvin/.pub-cache/hosted/pub.dev/kiosk_mode-0.6.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "leak_tracker",
       "rootUri": "file:///Users/calvin/.pub-cache/hosted/pub.dev/leak_tracker-10.0.8",
       "packageUri": "lib/",
@@ -134,6 +140,12 @@
       "languageVersion": "3.3"
     },
     {
+      "name": "stream_transform",
+      "rootUri": "file:///Users/calvin/.pub-cache/hosted/pub.dev/stream_transform-2.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.1"
+    },
+    {
       "name": "string_scanner",
       "rootUri": "file:///Users/calvin/.pub-cache/hosted/pub.dev/string_scanner-1.4.1",
       "packageUri": "lib/",
@@ -170,7 +182,7 @@
       "languageVersion": "3.7"
     }
   ],
-  "generated": "2025-04-12T05:30:46.357515Z",
+  "generated": "2025-04-12T05:43:25.695004Z",
   "generator": "pub",
   "generatorVersion": "3.7.2",
   "flutterRoot": "file:///Users/calvin/fvm/versions/3.29.2",
